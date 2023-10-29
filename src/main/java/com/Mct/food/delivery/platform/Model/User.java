@@ -24,11 +24,11 @@ public class User {
     @NotBlank
     private String userName;
 
-     @Pattern(regexp = "^.+@(?![Aa][Dd][Mm][Ii][Nn]\\.[Cc][Oo][Mm]$).+$")
+    // @Pattern(regexp = "^.+@(?![Aa][Dd][Mm][Ii][Nn]\\.[Cc][Oo][Mm]$).+$")
     @Column(unique = true)
     private String userEmail;
 
-    @Pattern(regexp = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[@#$%^&+=!])[A-Za-z\\d@#$%^&+=!]{8,}$")
+    //@Pattern(regexp = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[@#$%^&+=!])[A-Za-z\\d@#$%^&+=!]{8,}$")
     private String userPassword; //regex for strong password
     @NotNull
     @ManyToOne
